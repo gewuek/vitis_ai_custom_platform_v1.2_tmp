@@ -282,7 +282,7 @@ Open ***project-spec/meta-user/recipes-bsp/u-boot/files/platform-top.h*** and ad
 cd images/linux
 petalinux-build --sdk
 ```
-***Note: We would store all the necessary files for Vitis platform creation flow. Here we name it ```zcu102_dpu_pkg ```. Then we create a pfm folder inside.***<br />
+***Note: We would store all the necessary files for Vitis platform creation flow. Here we name it ```zcu104_dpu_pkg ```. Then we create a pfm folder inside.***<br />
 13. Type ```./sdk.sh``` to install PetaLinux SDK, provide a full pathname to the output directory ***<full_pathname_to_zcu104_dpu_pkg>/pfm***(here in this example I use ***/home/wuxian/wu_project/vitis2020.1/vitis_custom_platform_flow/zcu104_dpu_pkg/pfm***) and confirm.<br />
 14. We would install Vitis AI library and DNNDK into this rootfs in the future.<br />
 15. After the PetaLinux build succeeds, the generated Linux software components are in the ***<your_petalinux_dir>/images/linux directory***. For our example, the ***images/linux*** directory contains the generated image and ELF files listed below. Copy these files to the ***<full_pathname_to_zcu104_dpu_pkg>/pfm/boot*** directory in preparation for running the Vitis platform creation flow:<br />
@@ -359,8 +359,8 @@ Image:
 
 1. Download Vitis AI by calling command ```git clone https://github.com/Xilinx/Vitis-AI.git```.<br />
 2. Navigate to the repository:```cd Vitis-AI```, set the tag to proper tag(here we use ***v1.1***) by typing: ```git checkout v1.2```.<br />
-3. If you don't want to destroy the TRD reference design. Copy ***DPU-TRD*** folder into another directory. For example I would copy that into my ***zcu104_dpu_pkg*** folder: ```cp -r DPU-TRD ~/wu_project/vitis2019.2/vitis_custom_platform_flow/zcu104_dpu_pkg/```<br />
-4. Source Vitis tools setting sh file: ```source <vitis install path>/Vitis/2019.2/settings64.sh```.<br />
+3. If you don't want to destroy the TRD reference design. Copy ***DPU-TRD*** folder into another directory. For example I would copy that into my ***zcu104_dpu_pkg*** folder: ```cp -r DPU-TRD ~/wu_project/vitis2020.1/vitis_custom_platform_flow/zcu104_dpu_pkg/```<br />
+4. Source Vitis tools setting sh file: ```source <vitis install path>/Vitis/2020.1/settings64.sh```.<br />
 5. Source XRT sh file:```source opt/xilinx/xrt/setup.sh```.<br />
 6. Export SDX_PLATFORM with the directory of the custom platform xpfm file which you created before. Here in my project it would be: ```export SDX_PLATFORM=/home/wuxian/wu_project/vitis2020.1/vitis_custom_platform_flow/zcu104_dpu_pkg/zcu104_vai_custom/export/zcu104_vai_custom/zcu104_vai_custom.xpfm```. Remember now this custom platform name is ***zcu104_vai_custom***.<br />
 7. Navigate to the copy of the ***DPU-TRD*** folder, then go to the ***./prj/Vitis*** folder.<br />
