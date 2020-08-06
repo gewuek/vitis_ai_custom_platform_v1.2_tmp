@@ -552,6 +552,7 @@ cp /mnt/hello_dpu ./
 7. You should see the result like below:<br />
 ![test_result.PNG](/pic_for_readme/test_result.PNG)<br /><br />
 
+***Please refer to UG1144 if you would like to implement a ext4 rootfs.<br />***
 ## Reference<br />
 
 https://www.xilinx.com/html_docs/xilinx2020_1/vitis_doc/index.html<br />
