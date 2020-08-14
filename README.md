@@ -453,7 +453,7 @@ hineon
     cd vitis-ai_v1.2_dnndk
     ./install.sh <full_pathname_to_zcu104_dpu_pkg>/pfm/sysroots/aarch64-xilinx-linux
     ```
-***Now we install both the VAI lib and DNNDK packages into the rootfs set as Vitis sysroot, then we can build application on Vitis.***<br />
+***The install.sh copies dpu.xclbin from FAT32 partition to /usr/lib because DNNDK requires xclbin to be placed in this location. Now we install both the VAI lib and DNNDK packages into the rootfs set as Vitis sysroot, then we can build application on Vitis.***<br />
 
 21. Right click the ***hello_dpu*** project folder and select ***Build Project***<br />
 
