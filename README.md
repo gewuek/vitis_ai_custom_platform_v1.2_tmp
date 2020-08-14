@@ -185,36 +185,32 @@ A Vitis platform requires software components. For Linux, the PetaLinux tools ar
 4. Add user packages by appending the CONFIG_x lines below to the <your_petalinux_project_dir>/project-spec/meta-user/conf/user-rootfsconfig file.<br />
 Packages for base XRT support:<br />
 ```
-CONFIG_xrt
-CONFIG_xrt-dev
-CONFIG_zocl
+CONFIG_packagegroup-petalinux-xrt
+```
+Packages for easy system management:<br />
+```
 CONFIG_dnf
 CONFIG_e2fsprogs-resize2fs
 CONFIG_parted
-CONFIG_mesa-megadriver
-CONFIG_opencl-clhpp-dev
-CONFIG_opencl-headers-dev
-CONFIG_packagegroup-petalinux-opencv
-CONFIG_packagegroup-petalinux-opencv-dev
 ```
-Packages for DPU support:<br />
+Packages for Vitis-AI dependencies support:<br /> 
 ```
 CONFIG_packagegroup-petalinux-vitisai
 ```
-Packages for building Vitis AI applications:<br /> 
-```
-CONFIG_json-c-dev
-CONFIG_protobuf-dev
-CONFIG_protobuf-c
-CONFIG_libeigen-dev
-```
-Packages for native compiling on target board:<br /> 
+Packages for natively building Vitis AI applications on target board:<br /> 
 ```
 CONFIG_packagegroup-petalinux-self-hosted
 CONFIG_cmake 
+CONFIG_packagegroup-petalinux-vitisai-dev
+CONFIG_xrt-dev
+CONFIG_opencl-clhpp-dev
+CONFIG_opencl-headers-dev
+CONFIG_packagegroup-petalinux-opencv
+CONFIG_packagegroup-petalinux-opencv-dev 
 ```
-Packages mentioned at DPU integration lab for Vivado flow:<br /> 
+Packages for running Vitis-AI demo applications with GUI:<br /> 
 ```
+CONFIG_mesa-megadriver
 CONFIG_packagegroup-petalinux-x11
 CONFIG_packagegroup-petalinux-v4lutils
 CONFIG_packagegroup-petalinux-matchbox
