@@ -410,7 +410,7 @@ to<br />
 4. Select ***zcu104_vai_custom*** as platform, click ***next***.<br />
 5. Name the project ```hello_dpu```, click ***next***.<br />
 5. Set Domain to ***linux on psu_cortexa53***, set ***Sys_root path*** to ```<full_pathname_to_zcu104_dpu_pkg>/pfm/sysroots/aarch64-xilinx-linux```(as you created by running ***sdk.sh***), keep the ***Kernel Image*** setting in default and click ***next***.<br />
-6. Select ***System Optimization Examples -> Empty application*** and click ***finish*** to generate the application.<br />
+6. Select ***SW acceleration templates -> Empty Application*** and click ***finish*** to generate the application.<br />
 7. Right click on the ***src*** folder under your ***hello_dpu*** application  in the Expplorer window, and select "Import Sources"
 ![import_sources.png](/pic_for_readme/import_sources.png)<br /><br />
 8. Choose from directory ***<zcu104_dpu_pkg directory>/DPU-TRD/prj/Vitis/binary_container_1/*** as the target location, and import the ***dpu.xo*** file that we just created.<br />
