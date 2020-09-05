@@ -507,7 +507,7 @@ I would suggest you to refer to section "Setting Up the Target" of [Vitis AI lib
    c) Untar the packet and install them one by one on target board:<br />
    ```
    cd /mnt/package
-   tar -zxvf vitis-ai-runtime-1.2.0.tar.gz
+   tar -zxvf vitis-ai-runtime-1.2.0.tar.gz --no-same-owner
    cd ./vitis-ai-runtime-1.2.0/aarch64/centos/
    rpm -ivh --force --ignoresize libunilog-1.2.0-r10.aarch64.rpm
    rpm -ivh --force --ignoresize libxir-1.2.0-r12.aarch64.rpm
